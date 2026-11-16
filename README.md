@@ -1,74 +1,94 @@
-
-# Automotive Vision and AI-Based Smart Cockpit Demonstrator
+# Automotive Smart Vision – AI-Based Vehicle and Pedestrian Detection & Tracking
 
 ## 1. Project Overview
 
-This project aims to develop a software-based automotive vision and smart cockpit demonstrator using Artificial Intelligence and Computer Vision.
+Automotive Smart Vision is a software-based automotive computer vision demonstrator designed to detect and track vehicles and pedestrians in road traffic videos.
 
-The system will process recorded road-scene videos, detect vehicles and pedestrians using a pretrained AI model, and display detection information through a simulated smart cockpit interface.
+The system uses a pretrained YOLOv8 model for object detection, ByteTrack for multi-object tracking, and OpenCV for video processing and visualisation.
 
-The project will be developed entirely using software tools without requiring physical automotive hardware.
+The application displays bounding boxes, object classes, tracking IDs, detection confidence, object counts and processing FPS.
+
+The project is developed using software tools without requiring physical automotive hardware.
 
 ## 2. Project Objectives
 
 - Develop an AI-based vehicle and pedestrian detection system.
-- Process road-scene videos using OpenCV.
-- Integrate a pretrained YOLO object detection model.
-- Develop a virtual automotive ECU communication module.
-- Design a simulated smart cockpit Human-Machine Interface (HMI).
-- Implement visual warning indicators based on detection conditions.
-- Evaluate system performance through software testing.
+- Process recorded road-scene videos using OpenCV.
+- Integrate a pretrained YOLOv8 object detection model.
+- Implement multi-object tracking using ByteTrack.
+- Display persistent tracking IDs for detected objects.
+- Calculate vehicle and pedestrian counts.
+- Measure video processing performance using FPS.
+- Evaluate system behaviour through software testing.
 
 ## 3. System Architecture
 
-Road Video Input
-       |
-       v
+```text
+Road Traffic Video
+        |
+        v
 OpenCV Video Processing
-       |
-       v
-YOLO Object Detection
-       |
-       v
-Detection Data Processing
-       |
-       v
-Virtual ECU Communication
-       |
-       v
-Smart Cockpit HMI
-       |
-       v
-Warnings and Event Logging
+        |
+        v
+YOLOv8 Object Detection
+        |
+        v
+ByteTrack Multi-Object Tracking
+        |
+        v
+Detection and Tracking Data
+        |
+        v
+Visualisation and Information Panel
+        |
+        v
+Vehicle/Pedestrian Counts and FPS
+```
 
-## 4. Technologies
+## 4. Technologies and Tools
 
 | Technology | Application |
 |---|---|
 | Python | Main development language |
-| OpenCV | Video processing |
-| YOLO | Object detection |
+| OpenCV | Video processing and visualisation |
+| YOLOv8n | Vehicle and pedestrian detection |
+| ByteTrack | Multi-object tracking |
 | NumPy | Numerical processing |
-| Streamlit | Smart cockpit interface |
-| pytest | Software testing |
 | Git and GitHub | Version control |
+| VS Code | Development environment |
 
-## 5. Project Modules
+## 5. Implemented Modules
 
 - Video Processing
 - AI Object Detection
-- Virtual ECU Communication
-- Smart Cockpit HMI
-- Software Testing and Validation
+- Multi-Object Tracking
+- Vehicle and Pedestrian Counting
+- FPS Performance Monitoring
+- Detection Visualisation
 
-## 6. Development Status
+## 6. Performance and Testing
 
-Project setup and GitHub repository configuration completed.
+The system was tested using a recorded road traffic video.
 
-Implementation and testing will be carried out progressively.
+| Parameter | Observed result |
+|---|---|
+| Object detection | Working |
+| Vehicle tracking | Working |
+| Pedestrian tracking | Working |
+| Tracking ID consistency | Verified for a tested vehicle sequence |
+| FPS | Approximately 29 FPS observed peak |
 
-## 7. Project Type
+Performance depends on the computer hardware, video resolution and traffic scene.
 
-Software-only automotive demonstrator.
+## 7. Project Limitations
 
-No physical hardware is required.
+- Uses a pretrained YOLOv8n model.
+- Detection performance depends on lighting, visibility and object size.
+- Tracking IDs may change when objects are occluded or lost.
+- The system has not been validated for safety-critical automotive deployment.
+
+## 8. Project Type
+
+Software-only automotive computer vision demonstrator.
+
+No physical automotive hardware is required.
