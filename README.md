@@ -97,10 +97,13 @@ No physical automotive hardware is required.
 ## 9. Project Demonstration
 
 ### Vehicle and Pedestrian Detection
-![Detection](docs/screenshots/detection.png)
+
+![Detection](docs/detection.png)
 
 ### Multi-Object Tracking
-![Tracking](docs/screenshots/tracking.png)
+
+![Tracking](docs/tracking.png)
 
 ### Performance Monitoring
-![Performance](docs/screenshots/performance.png)
+
+![Performance](docs/performance.png)
