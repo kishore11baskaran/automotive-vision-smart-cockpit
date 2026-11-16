@@ -218,3 +218,11 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Automotive Smart Vision project files
+yolov8n.pt
+data/sample_videos/*.mp4
+
+# Generated output
+runs/
+results/

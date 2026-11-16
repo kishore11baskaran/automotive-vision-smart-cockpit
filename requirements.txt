@@ -1,0 +1,8 @@
+
+opencv-python
+ultralytics
+numpy
+streamlit
+pandas
+pytest
+Pillow
